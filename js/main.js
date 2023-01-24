@@ -11,10 +11,17 @@ function camelize(str) {
     console.log(ret.join(''));
 }
 
+console.log(filterRange([17, 4, 23, 33, 6, 2, 102, 44, 6], 40, 10));
+
 // looks for elements with values higher or equal to a AND
 // lower or equal to b
 // returns a result as an array
 function filterRange(arr, a, b) {
     let ret = [];
-    
+    arr.forEach(element => {
+        if (element >= a || element <= b) {
+            ret.push(element);
+        }
+    });
+    return ret;
 }
